@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-codemirror}
-  s.version           = %q{0.1.2}
+  s.version           = %q{0.1.3}
   s.summary           = %q{CodeMirror for Refinery}
   s.description       = %q{Replaces the textarea in WYMeditor with CodeMirror}
   s.email             = %q{johnagan@gmail.com}
