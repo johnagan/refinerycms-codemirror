@@ -8,3 +8,4 @@ test/dummy/.sass-cache
 .DS_Store
 refinerycms-codemirror-0.1.2.gem
 *.sublime*
+*.gem
