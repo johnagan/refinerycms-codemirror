@@ -16,8 +16,8 @@ $.extend skin,
 
     # build the codemirror textarea
     codemirror = CodeMirror.fromTextArea(textarea,
-      lineNumbers: true
       matchBrackets: true
+      lineNumbers: true
       mode: "text/html"
       enterMode: "keep"
       tabMode: "shift"
@@ -37,4 +37,5 @@ $.extend skin,
     # click handler for the html button
     $(".wym_tools_html a").click ->
       $(".wym_iframe, .wym_codemirror", container).toggle()
+      codemirror.setValue wym.html()
       codemirror.refresh() # codemirror must be refreshed if it was hidden
