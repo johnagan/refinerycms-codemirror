@@ -15,7 +15,7 @@ $.extend skin,
     section = $("<div/>").addClass("wym_codemirror wym_section").appendTo(mainPanel)
 
     # build the codemirror textarea
-    codemirror = CodeMirror.fromTextArea(textarea,
+    codemirror = CodeMirror.fromTextArea textarea,
       matchBrackets: true
       lineNumbers: true
       mode: "text/html"
@@ -26,7 +26,6 @@ $.extend skin,
       onChange: -> # keep wym updated
         html = codemirror.getValue()
         wym.html(html)
-    )
 
     # move the editor into the proper place
     $(".CodeMirror", container).detach().appendTo(section)
@@ -39,3 +38,7 @@ $.extend skin,
       $(".wym_iframe, .wym_codemirror", container).toggle()
       codemirror.setValue wym.html()
       codemirror.refresh() # codemirror must be refreshed if it was hidden
+
+    $("input.wymupdate").click ->
+      codemirror.setValue wym.html()
+      codemirror.refresh()
