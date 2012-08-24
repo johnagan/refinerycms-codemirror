@@ -16,4 +16,4 @@ Then bundle:
 
     bundle install
 
-No migration or generation needed. This is only a script and style include.
+No migration or generation needed. This is the only a script and style include.
